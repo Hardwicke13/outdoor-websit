@@ -95,6 +95,8 @@ textarea {
   body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    color: #e2e3ed;
+    text-align: left;
   }
 
   ul,
@@ -109,19 +111,22 @@ textarea {
 
   h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2em;
+    font-weight: 500;
+    font-size: 1.875em;
     
   }
 
   h3,
   h4 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2em;
+    font-size: 1.125em;
+    margin: 20px 0;
+    font-weight: 500;
   }
 
   p {
-    font-size: 1em;
-    line-height: 1;
+    font-size: .875em;
+    line-height: 1.285;
   }
 
   img {
@@ -136,9 +141,7 @@ textarea {
     font-style: normal;
   }
 
-  .content-wrapper {
 
-  }
 
   /*--------------Base Header/Footer styles----------------*/
 
@@ -153,6 +156,7 @@ textarea {
      justify-content: center;
      align-items: center;
      flex-flow: row wrap;
+     background-color: #202322;
    }
 
    header {
@@ -165,6 +169,9 @@ textarea {
     align-items: center;
     flex-flow: row wrap;
      width: 60%;
+     font-size: 1.125em;
+     font-weight: 700;
+     text-transform: uppercase;
    }
 
    header .content-wrapper {
@@ -180,15 +187,23 @@ textarea {
      justify-content: space-around;
      width: 100%;
    }
+   
+   header nav ul li {
+    font-size: 1.125em;
+  }
 
    .header-divider {
+     background: #3a3a3a;
      width: 100%;
      height: 1px;
      margin: 10px 0 20px 0;
    }
 
+
+
    footer {
      flex-direction: column;
+     text-align: center;
    }
 
    footer p {
@@ -208,9 +223,9 @@ textarea {
    footer .content-wrapper {
      width: 55%;
      margin: 50px 0;
+    }
 
-   }
-
+  
    footer .social-icons p {
      display: flex;
      justify-content: center;
@@ -228,11 +243,24 @@ textarea {
   justify-content: center;
   flex-flow: row wrap;
   }
+
+  .hero-area h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500; 
+    line-height: 1.2; 
+  }
+  
   aside {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap; 
+    background-color: #527158;
+  }
+
+  aside .form{
+    margin-top: 30px;
   }
 
 
@@ -262,6 +290,7 @@ textarea {
 
   .features p {
     margin: 0;
+    text-align: center;
   }
   
   
@@ -269,10 +298,12 @@ textarea {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    background-color: #2a423a;
   }
   
   .reviews h2 {
     margin-bottom: 40px;
+    line-height: 1;
   }
   
   .reviews h3 {
@@ -287,6 +318,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    background-color: #527158;
   }
   
   .contact-section {
@@ -294,6 +326,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    background-color: #2a423a;
   }
 
   .contact-content p {
@@ -307,6 +340,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    background-color: #527158;
   }
   
   .faq .content-wrapper {
@@ -323,6 +357,11 @@ textarea {
 
   .faq h2 {
     width:40px;
+    line-height: 1;
+  }
+
+  .faq h4 {
+    line-height: 1.333;
   }
 
   
@@ -409,6 +448,39 @@ textarea {
   clear: both;
 }
 
+
+/*----------------User Input Form----------------*/
+1
+22
+23
+24
+25
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -487,6 +559,15 @@ textarea {
     width: 49%;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
+
   /*Footer */
   footer .content-wrapper {
     width: 65%;
@@ -501,6 +582,11 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+  }
+
+  footer p {
+    line-height: 1.285;
   }
 
   footer .copyright {
@@ -530,10 +616,12 @@ textarea {
   align-items: flex-start;
 }
 
-/*---------------Faq Page---------------*/
-header {
-  padding: 15px 0;
+.contact-content h4 {
+  font-size: 1.5em;
 }
+
+/*---------------Faq Page---------------*/
+
 
 .faq .content-wrapper {
   justify-content: space-between;
@@ -547,18 +635,41 @@ header {
   width: 100%;
 }
 
+.faq h4,
+.faq p {
+  font-size: .875em;
+  line-height: 1.125;
+}
+
 
 @media only screen and (min-width: 1200px){
 /*Desktop styles here*/
 
-
+header {
+  padding: 15px 0;
+}
 .content-wrapper {
   max-width: 960px;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3,
+h4 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.333;
 }
 
 /*Hero*/
 .hero-area h1 {
   width: 60%;
+  font-size: 3.75em;
 }
 
 /*Aside*/
@@ -570,6 +681,11 @@ aside .content-wrapper .form-description,
 aside .content-wrapper .form {
   width: 30%;
 }
+
+.form-description p {
+  font-size: 1.125em;
+}
+
 
 /*Features*/
 .features h2 {
@@ -585,15 +701,36 @@ aside .content-wrapper .form {
   width: 42%;
 }
 
+.reviews h2 {
+  padding-bottom: 50px;
+}
+
+footer h4 {
+  font-size: 1.875em;
+}
+
 /*------------------About Page--------------*/
 .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
 }
+
+.contact-content h4 {
+  font-size: 1.875em;
+}
+
 
 /*Faq Page*/
 .faq h2 {
   width: 100%;
+  font-size: 3em;
+}
+
+.faq h4,
+.faq p {
+  font-size: 1.125em;
+  line-height: 1;
 }
 
 /* ==========================================================================
