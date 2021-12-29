@@ -130,11 +130,11 @@ textarea {
   }
 
   img {
-
+    width: 100%;
   }
 
   figure {
-
+    margin: 0;
   }
 
   address {
@@ -179,6 +179,14 @@ textarea {
      display: flex;
      justify-content: center;
      align-items: center;
+     flex-flow: row wrap;
+   }
+
+   header figure {
+     width: 60%;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
      flex-flow: row wrap;
    }
 
@@ -242,6 +250,10 @@ textarea {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url(../img/jake-melara-30679-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   }
 
   .hero-area h1 {
@@ -263,12 +275,41 @@ textarea {
     margin-top: 30px;
   }
 
+  aside .form {
+    margin-top: 30px;
+  }
+   
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+    padding: 1em;
+  }
+   
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
 
 
   .features {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    background: url(../img/workweekbackground.jpg);
+    background-size: cover;
+    background-position: center;
   }
 
   .features h2 {
@@ -360,7 +401,7 @@ textarea {
     line-height: 1;
   }
 
-  .faq h4 {
+  .faq-content h4 {
     line-height: 1.333;
   }
 
@@ -448,39 +489,6 @@ textarea {
   clear: both;
 }
 
-
-/*----------------User Input Form----------------*/
-1
-22
-23
-24
-25
-aside .form {
-  margin-top: 30px;
-}
- 
-input[type=text] {
-  box-sizing: border-box;
-  width: 100%;
-  color: #2a423a;
-  font-style: italic;
-  padding: 1em;
-}
- 
-input[type=button] {
-  width: 100%;
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #2a423a;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.125em;
-  color: #e2e3ed;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -494,11 +502,21 @@ input[type=button] {
     margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+  }
+
   /*Header*/
 
   header {
   justify-content: space-around;
-  padding: 33px 0;
+  padding: 50px 0;
   }
 
   header .content-wrapper {
@@ -518,7 +536,20 @@ input[type=button] {
     display: none;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   /*Hero Area*/
+  .hero-area {
+    min-height: 600px;
+  }
+
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+  }
 
   /*Aside */
   aside .content-wrapper {
@@ -536,6 +567,11 @@ input[type=button] {
 
   /*Features */
 
+  .features h2 {
+    margin-bottom: 20px;
+  }
+
+
   .features article {
     display: flex;
     justify-content: center;
@@ -544,7 +580,7 @@ input[type=button] {
     flex-basis: 50%;
   }
 
-  .features .features-items-description {
+  .features .features-item-description {
     width: 62%;
 
   }
@@ -555,7 +591,8 @@ input[type=button] {
     justify-content: space-between;
   }
 
-  .reviews article div {
+  .reviews article figure,
+  .reviews article div{
     width: 49%;
   }
 
@@ -578,7 +615,7 @@ input[type=button] {
     margin-bottom: 0;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -587,6 +624,11 @@ input[type=button] {
 
   footer p {
     line-height: 1.285;
+  }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
   }
 
   footer .copyright {
@@ -642,7 +684,7 @@ input[type=button] {
 }
 
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1200px) {
 /*Desktop styles here*/
 
 header {
@@ -668,7 +710,7 @@ p {
 
 /*Hero*/
 .hero-area h1 {
-  width: 60%;
+  width: 80%;
   font-size: 3.75em;
 }
 
